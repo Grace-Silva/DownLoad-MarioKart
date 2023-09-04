@@ -91,10 +91,55 @@
     background: var(--nintendoRedHover);
 }
 
-/* /* From https://css.glass 
-background: rgba(255, 255, 255, 0.2);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);*/
+.downloadButton{
+    border: solid white;
+    margin-top: 25vh;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--white);
+    background: var(--nintendoRed);
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all ease .5s;
+}
+.downloadButton:hover{
+    background: var(--nintendoRedHover);
+    transform: scale(1.1);
+}
+
+
+.downloadButton i{
+    margin-left: 8px;
+}
+
+.countdownText{
+    font-weight: 600;
+    color: var(--white);
+}
+
+.countdownText span, .manualDownloadLink{
+    color: var(--nintendoRed);
+    font-size: 1.4em;
+    font-weight: 700;
+    -webkit-text-stroke: .5px var(--white);
+    transition: all ease .2s;
+}
+
+.pleaseWaitText{
+    font-weight: 600;
+    color: var(--white);
+}
+
+.manualDownloadText{
+    font-weight: 600;
+    color: var(--white);
+}
+
+.manualDownloadLink:hover{
+    color: var(--white);
+    -webkit-text-stroke: .5px var(--nintendoRed);
+
+}
 
