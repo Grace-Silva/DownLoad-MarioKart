@@ -54,9 +54,39 @@
     filter: drop-shadow(0 0 4px #fff);
 }
 
+.navbar .navLinks{
+    display: flex;
+    gap: 2.2em;
+}
+
+.navLinks .navLink{
+    border: silver solid;
+    padding: 6px 12px;
+    background: 1px transparent;
+    border: transparent;
+    border-radius: 25px;
+    transition: all ease .5s;
+}
+.navLinks .navLink:hover{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navLinks .navLink i{
+    margin-left: 4px;
+}
+
+.navLinks .navLink a{
+    color: var(--white);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
 /* /* From https://css.glass 
 background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
