@@ -33,6 +33,32 @@
     background-attachment:fixed;
 }
 
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 4em 2em 4em;
+    border: solid red;
+}
 
+.navbar .logo{
+    width: 240px;
+}
 
+.navbar .logo .logoImage{
+    width: 100%;
+    transition: all ease .3s;
+}
+.navbar .logo .logoImage:hover{
+    filter: drop-shadow(0 0 4px #fff);
+}
+
+/* /* From https://css.glass 
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);*/
 
