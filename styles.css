@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(./img/background.jpg);
+    background: radial-gradient(circle, rgba(4,4,4,0.2) 20%, rgba(4,4,4,0.5) 80%), url(./img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -39,7 +39,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 2em 4em 2em 4em;
-    border: solid red;
 }
 
 .navbar .logo{
@@ -61,11 +60,11 @@
 
 .navLinks .navLink{
     border: silver solid;
-    padding: 6px 12px;
+    padding: 6px 16px;
     background: 1px transparent;
     border: transparent;
     border-radius: 25px;
-    transition: all ease .5s;
+    transition: all ease-in-out .5s;
 }
 .navLinks .navLink:hover{
     background: rgba(255, 255, 255, 0.2);
@@ -81,8 +80,15 @@
 
 .navLinks .navLink a{
     color: var(--white);
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600;
+}
+
+.navLinks .navLink:first-child{
+    background: var(--nintendoRed);
+}
+.navLinks .navLink:first-child:hover{
+    background: var(--nintendoRedHover);
 }
 
 /* /* From https://css.glass 
