@@ -93,7 +93,7 @@
 
 .downloadButton{
     border: solid white;
-    margin-top: 25vh;
+    margin-top: 30vh;
     padding: 12px 24px;
     font-weight: 700;
     font-size: 1.5em;
@@ -117,6 +117,7 @@
 .countdownText{
     font-weight: 600;
     color: var(--white);
+    display: none;
 }
 
 .countdownText span, .manualDownloadLink{
@@ -130,11 +131,13 @@
 .pleaseWaitText{
     font-weight: 600;
     color: var(--white);
+    display: none;
 }
 
 .manualDownloadText{
     font-weight: 600;
     color: var(--white);
+    display: none;
 }
 
 .manualDownloadLink:hover{
