@@ -12,9 +12,12 @@ let mainContainer = document.querySelector(".mainContainer");
 
 downloadButton.addEventListener("click", () =>{
     // al clickear sobre nuestro botón este desaparece y las demás funciones se ejecutarán
-    /*mainContainer.style.background = "background: radial-gradient(circle, rgba(4,4,4,0.5) 20%, rgba(4,4,4,0.8) 80%), url(./img/background.jpg)";*/
+    /* aqui el fondo se opacará y cambiará su imagen */
+    mainContainer.style.background = "radial-gradient(circle, rgba(4,4,4,0.5) 20%, rgba(4,4,4,0.8) 80%), url('./img/background2.jpg')";
+    mainContainer.style.backgroundSize = "cover";
     downloadButton.style.display = "none";
     countdownText.style.display = "block";
+    countdownText.style.marginTop = "30vh";
     let timeLeft = 10; // 10 segundos de espera
 
     // función para contar hacia atrás

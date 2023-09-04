@@ -6,7 +6,7 @@
     --nintendoRed: #E60012;
     --nintendoRedHover: #BF0010;
     --white: #fafafa;
-    --gold: #ae8d0b;
+    --yellow: #E2F20D;
 }
 
 *{
@@ -59,7 +59,6 @@
 }
 
 .navLinks .navLink{
-    border: silver solid;
     padding: 6px 16px;
     background: 1px transparent;
     border: transparent;
@@ -121,10 +120,9 @@
 }
 
 .countdownText span, .manualDownloadLink{
-    color: var(--nintendoRed);
+    color: var(--yellow);
     font-size: 1.4em;
     font-weight: 700;
-    -webkit-text-stroke: .5px var(--white);
     transition: all ease .2s;
 }
 
@@ -142,7 +140,7 @@
 
 .manualDownloadLink:hover{
     color: var(--white);
-    -webkit-text-stroke: .5px var(--nintendoRed);
+    text-shadow: 0 0 2px var(--white);
 
 }
 
