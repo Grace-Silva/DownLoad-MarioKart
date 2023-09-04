@@ -9,6 +9,7 @@ let manualDownloadText = document.querySelector(".manualDownloadText");
 let manualDownloadLink = document.querySelector(".manualDownloadLink");
 
 let mainContainer = document.querySelector(".mainContainer");
+let rewardAudio = document.getElementById("rewardAudio");
 
 downloadButton.addEventListener("click", () =>{
     // al clickear sobre nuestro botón este desaparece y las demás funciones se ejecutarán
@@ -18,6 +19,10 @@ downloadButton.addEventListener("click", () =>{
     downloadButton.style.display = "none";
     countdownText.style.display = "block";
     countdownText.style.marginTop = "30vh";
+
+    rewardAudio.volume = 0.5;
+    rewardAudio.play();
+
     let timeLeft = 10; // 10 segundos de espera
 
     // función para contar hacia atrás
