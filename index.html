@@ -1,50 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="shortcut icon" href="./img/favicon/android-icon-96x96.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Mario Kart 64</title>
+    <link
+      rel="shortcut icon"
+      href="./img/favicon/android-icon-96x96.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <main class="mainContainer">
+      <!-- start navbar -->
+      <nav class="navbar">
+        <a href="" class="logo"
+          ><img src="./img/logo.png" alt="" class="logoImage"
+        /></a>
 
-        <!-- start navbar -->
-        <nav class="navbar">
+        <ul class="navLinks">
+          <li class="navLink">
+            <a href=""> Play Now <i class="fa-solid fa-trophy"></i></a>
+          </li>
+          <li class="navLink"><a href=""> Characters </a></li>
+          <li class="navLink"><a href=""> Modes </a></li>
+          <li class="navLink"><a href=""> Community </a></li>
+        </ul>
+      </nav>
+      <!-- ends navbar -->
 
-            <a href="" class="logo"><img src="./img/logo.png" alt="" class="logoImage"></a>
+      <!-- download button -->
+      <a href="#" class="downloadButton"
+        >Download Now<i class="fa-solid fa-download"></i
+      ></a>
 
-            <ul class="navLinks">
+      <!-- countdown -->
+      <h1 class="countdownText">
+        Download will begin automatically in
+        <span class="countdown">0</span> seconds
+      </h1>
 
-                <li class="navLink"><a href=""> Play Now <i class="fa-solid fa-trophy"></i></a></li>
-                <li class="navLink"><a href=""> Characters </a></li>
-                <li class="navLink"><a href=""> Modes </a></li>
-                <li class="navLink"><a href=""> Community </a></li>
+      <!-- wait... -->
+      <h2 class="pleaseWaitText">Please Wait ...</h2>
 
-            </ul>
+      <!-- manual download -->
+      <h2 class="manualDownloadText">
+        If the download didn't start automatically,
+        <a href="" class="manualDownloadLink"> Click Here </a>.
+      </h2>
 
-        </nav>
-        <!-- ends navbar -->
-
-        <!-- download button -->
-        <a href="#" class="downloadButton">Download Now<i class="fa-solid fa-download"></i></a>
-
-        <!-- countdown -->
-        <h1 class="countdownText">Download will begin automatically in <span class="countdown">0</span> seconds</h1>
-
-        <!-- wait... -->
-        <h2 class="pleaseWaitText">Please Wait ...</h2>
-
-        <!-- manual download -->
-        <h2 class="manualDownloadText">If the download didn't start automatically, <a href="" class="manualDownloadLink"> Click Here </a>.</h2>
-
-        <audio src="./files/audio/coin.mp3" id="rewardAudio">Audio no Soportado</audio>
-
+      <audio src="./files/audio/coin.mp3" id="rewardAudio">
+        Audio no Soportado
+      </audio>
     </main>
 
     <script src="./src/main.js"></script>
-</body>
+  </body>
 </html>

@@ -1,146 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-
-
-:root{
-    --nintendoRed: #E60012;
-    --nintendoRedHover: #BF0010;
-    --white: #fafafa;
-    --yellow: #E2F20D;
+:root {
+  --nintendoRed: #e60012;
+  --nintendoRedHover: #bf0010;
+  --white: #fafafa;
+  --yellow: #e2f20d;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    outline: none;
-    font-family: 'Nunito', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: "Nunito", sans-serif;
 }
 
-.mainContainer{
-    width: 100%;
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: radial-gradient(circle, rgba(4,4,4,0.2) 20%, rgba(4,4,4,0.5) 80%), url(./img/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment:fixed;
+.mainContainer {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(
+      circle,
+      rgba(4, 4, 4, 0.2) 20%,
+      rgba(4, 4, 4, 0.5) 80%
+    ),
+    url(./img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.navbar{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em 4em 2em 4em;
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 4em 2em 4em;
 }
 
-.navbar .logo{
-    width: 240px;
+.navbar .logo {
+  width: 240px;
 }
 
-.navbar .logo .logoImage{
-    width: 100%;
-    transition: all ease .3s;
+.navbar .logo .logoImage {
+  width: 100%;
+  transition: all ease 0.3s;
 }
-.navbar .logo .logoImage:hover{
-    filter: drop-shadow(0 0 4px #fff);
-}
-
-.navbar .navLinks{
-    display: flex;
-    gap: 2.2em;
+.navbar .logo .logoImage:hover {
+  filter: drop-shadow(0 0 4px #fff);
 }
 
-.navLinks .navLink{
-    padding: 6px 16px;
-    background: 1px transparent;
-    border: transparent;
-    border-radius: 25px;
-    transition: all ease-in-out .5s;
-}
-.navLinks .navLink:hover{
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.navbar .navLinks {
+  display: flex;
+  gap: 2.2em;
 }
 
-.navLinks .navLink i{
-    margin-left: 4px;
+.navLinks .navLink {
+  padding: 6px 16px;
+  background: 1px transparent;
+  border: transparent;
+  border-radius: 25px;
+  transition: all ease-in-out 0.5s;
+}
+.navLinks .navLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.navLinks .navLink a{
-    color: var(--white);
-    font-size: 1.1em;
-    font-weight: 600;
+.navLinks .navLink i {
+  margin-left: 4px;
 }
 
-.navLinks .navLink:first-child{
-    background: var(--nintendoRed);
-}
-.navLinks .navLink:first-child:hover{
-    background: var(--nintendoRedHover);
-}
-
-.downloadButton{
-    border: solid white;
-    margin-top: 30vh;
-    padding: 12px 24px;
-    font-weight: 700;
-    font-size: 1.5em;
-    color: var(--white);
-    background: var(--nintendoRed);
-    border-radius: 25px;
-    border: none;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    transition: all ease .5s;
-}
-.downloadButton:hover{
-    background: var(--nintendoRedHover);
-    transform: scale(1.1);
+.navLinks .navLink a {
+  color: var(--white);
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
-
-.downloadButton i{
-    margin-left: 8px;
+.navLinks .navLink:first-child {
+  background: var(--nintendoRed);
+}
+.navLinks .navLink:first-child:hover {
+  background: var(--nintendoRedHover);
 }
 
-.countdownText{
-    font-weight: 600;
-    color: var(--white);
-    display: none;
+.downloadButton {
+  border: solid white;
+  margin-top: 30vh;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--white);
+  background: var(--nintendoRed);
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: all ease 0.5s;
+}
+.downloadButton:hover {
+  background: var(--nintendoRedHover);
+  transform: scale(1.1);
 }
 
-.countdownText span, .manualDownloadLink{
-    color: var(--yellow);
-    font-size: 1.4em;
-    font-weight: 700;
-    transition: all ease .2s;
+.downloadButton i {
+  margin-left: 8px;
 }
 
-.pleaseWaitText{
-    font-weight: 600;
-    color: var(--white);
-    display: none;
+.countdownText {
+  font-weight: 600;
+  color: var(--white);
+  display: none;
 }
 
-.manualDownloadText{
-    font-weight: 600;
-    color: var(--white);
-    display: none;
+.countdownText span,
+.manualDownloadLink {
+  color: var(--yellow);
+  font-size: 1.4em;
+  font-weight: 700;
+  transition: all ease 0.2s;
 }
 
-.manualDownloadLink:hover{
-    color: var(--white);
-    text-shadow: 0 0 2px var(--white);
-
+.pleaseWaitText {
+  font-weight: 600;
+  color: var(--white);
+  display: none;
 }
 
+.manualDownloadText {
+  font-weight: 600;
+  color: var(--white);
+  display: none;
+}
+
+.manualDownloadLink:hover {
+  color: var(--white);
+  text-shadow: 0 0 2px var(--white);
+}
