@@ -168,9 +168,49 @@
 
 
 /* breakpoints */
+
 @media(max-width: 998px){
 
   .navbar{
     padding: 2em;
   }
+
+}
+
+@media(max-width: 768px){
+
+  .navbar{
+    padding: 1.6em;
+  }
+
+  .navbar .logo{
+    width: 220px;
+  }
+
+  .navbar .navLinks{
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    background: var(--nintendoRedHover);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+ 
+  .navbar .navLinks .navLink{
+    display: block;
+  }
+
+  .menu{
+    display: block;
+    z-index: 10;
+  }
+  
 }
