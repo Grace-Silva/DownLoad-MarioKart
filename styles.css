@@ -172,6 +172,7 @@
 
 /* breakpoints */
 
+/* laptop */
 @media(max-width: 998px){
 
   .navbar{
@@ -180,6 +181,7 @@
 
 }
 
+/* tablets y ipads */
 @media(max-width: 768px){
 
   .navbar{
@@ -245,4 +247,17 @@
   .manualDownloadLink{
     font-size: 1.1em;
   }
+}
+
+/* móviles */
+@media(max-width:480px){
+
+  .navbar .logo{
+    width: 200px;
+  }
+
+  .manualDownloadLink{
+    font-size: 1em;
+  }
+
 }
