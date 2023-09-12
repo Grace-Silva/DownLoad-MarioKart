@@ -63,10 +63,10 @@
 
 .navLinks .navLink {
   padding: 6px 16px;
-  background: 1px transparent;
-  border: transparent;
+  background: transparent;
+  border: 1px transparent;
   border-radius: 25px;
-  transition: all ease-in-out 0.5s;
+  transition: all ease .5s;
 }
 .navLinks .navLink:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -91,6 +91,26 @@
 }
 .navLinks .navLink:first-child:hover {
   background: var(--nintendoRedHover);
+}
+
+.menu{
+  display: none;
+  text-align: center;
+  border: solid red;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.menu:active{
+  background: var(--nintendoRed);
 }
 
 .downloadButton {
@@ -144,4 +164,13 @@
 .manualDownloadLink:hover {
   color: var(--white);
   text-shadow: 0 0 2px var(--white);
+}
+
+
+/* breakpoints */
+@media(max-width: 998px){
+
+  .navbar{
+    padding: 2em;
+  }
 }
