@@ -191,7 +191,7 @@
     /*display: none;*/
     position: absolute;
     top: 0;
-    right: 0;
+    right: -100%;
     flex-direction: column;
     width: 50%;
     height: 100vh;
@@ -202,8 +202,12 @@
     background: var(--nintendoRedHover);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all ease .3s;
   }
- 
+  .navbar .navLinks.open{
+    right: 0;
+  }
+  
   .navbar .navLinks .navLink{
     display: block;
   }

@@ -66,3 +66,14 @@ downloadButton.addEventListener("click", () => {
     }
   }, 1000); // la funcion se actualizará cada 1 segundo
 });
+
+// menu lateral
+let menu = document.querySelector(".menu");
+let navLinks = document.querySelector(".navLinks");
+
+menu.onclick=()=>{
+    menu.classList.toggle('bx-x');
+    navLinks.classList.toggle('open');
+}
+
+
