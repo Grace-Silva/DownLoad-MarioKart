@@ -139,6 +139,7 @@
   font-weight: 600;
   color: var(--white);
   display: none;
+  text-align: center;
 }
 
 .countdownText span,
@@ -153,12 +154,14 @@
   font-weight: 600;
   color: var(--white);
   display: none;
+  text-align: center;
 }
 
 .manualDownloadText {
   font-weight: 600;
   color: var(--white);
   display: none;
+  text-align: center;
 }
 
 .manualDownloadLink:hover {
@@ -216,5 +219,30 @@
     display: block;
     z-index: 10;
   }
+
+  .downloadButton{
+    font-size: 1.2em;
+  }
+
+  .countdownText, .pleaseWaitText, .manualDownloadText{
+    margin: 0 1.5em;
+  }
   
+  .countdownText{
+    font-size: 1.5em;
+  }
+
+  .pleaseWaitText{
+    font-size: 1.2em;
+  }
+
+  .manualDownloadText{
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+
+  .countdownText span,
+  .manualDownloadLink{
+    font-size: 1.1em;
+  }
 }
