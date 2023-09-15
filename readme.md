@@ -23,6 +23,9 @@ Iniciamos con la pantalla inicial que nos muestra una barra de navegación y un 
 ***
 ## Responsive Design
 ![Multiples Dispositivos](./img/screenshots/devices.jpg)
+***
 Este proyecto se encuentra en desarrollo y preparado para su posterior expansión. Espero haya sea de su agrado.
+
+[Ver en Vivo:](https://grace-silva.github.io/DownLoad-MarioKart/)
 
 Autor: [ Grace Silva ](https://github.com/Grace-Silva)
