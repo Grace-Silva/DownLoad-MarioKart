@@ -15,8 +15,12 @@
   list-style: none;
   outline: none;
   font-family: "Nunito", sans-serif;
+}
+
+body{
   overflow: hidden;
 }
+
 
 .mainContainer {
   width: 100%;
@@ -34,7 +38,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
 }
 
 .navbar {
@@ -194,7 +198,7 @@
   }
 
   .navbar .navLinks{
-    /*display: none;*/
+    display: hidden;
     position: absolute;
     top: 0;
     right: -100%;
