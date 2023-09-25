@@ -18,11 +18,11 @@
 }
 
 html{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .mainContainer {
@@ -177,6 +177,83 @@ body{
   text-shadow: 0 0 2px var(--white);
 }
 
+
+/* personajes */
+
+.charactersContainer{
+
+}
+
+.characters{
+  border: solid;
+  padding: 4em 2em;
+  display: flex;
+  gap: 2.2em;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.characters .character{
+  width:fit-content;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  text-align: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all ease .5s;
+  color: var(--white);
+  background: rgb(230,0,18);
+  background: radial-gradient(circle, rgba(230,0,18,0.5) 0%, rgba(191,0,16,1) 100%); 
+}
+.characters .character:hover{
+  transform: scale(1.1);
+}
+
+.character .name{
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.character span{
+  display: inline-block;
+  background: var(--nintendoRed);
+  padding: 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.characters .character .characterImage{
+  width: 200px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.charactersContainerButtons{
+  display: flex;
+  text-align: center;
+  gap: 2em;
+  justify-content: center;
+}
+
+.charactersContainerButtons button{
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background: var(--nintendoRedHover);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+.charactersContainerButtons button:hover{
+  background: rgba(0, 0, 0, .8);
+}
 
 /* breakpoints */
 
