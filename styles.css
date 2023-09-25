@@ -15,14 +15,17 @@
   list-style: none;
   outline: none;
   font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .mainContainer {
@@ -181,21 +184,22 @@ body{
 /* personajes */
 
 .charactersContainer{
-
+  padding: 4em;
 }
 
 .characters{
   border: solid;
-  padding: 4em 2em;
   display: flex;
-  gap: 2.2em;
+  padding: 1em;
   width: max-content;
+  gap: 1.3em;
   max-width: 100%;
-  overflow: auto;
+  overflow: hidden;
+  border: solid white;
 }
 
 .characters .character{
-  width:fit-content;
+  width: fit-content;
   border: 1px solid transparent;
   display: flex;
   flex-direction: column;
@@ -214,6 +218,9 @@ body{
 .characters .character:hover{
   transform: scale(1.1);
 }
+.characters:hover > :not(:hover){
+  opacity: .5;
+}
 
 .character .name{
   font-weight: 700;
@@ -230,7 +237,7 @@ body{
 }
 
 .characters .character .characterImage{
-  width: 200px;
+  width: 180px;
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
 }
 
@@ -245,14 +252,17 @@ body{
   width: 4em;
   height: 4em;
   border-radius: 50%;
-  background: var(--nintendoRedHover);
+  background: var(--nintendoRed);
   color: var(--white);
   border: none;
   cursor: pointer;
   transition: all ease .5s;
 }
 .charactersContainerButtons button:hover{
-  background: rgba(0, 0, 0, .8);
+  background: var(--nintendoRedHover);
+}
+.charactersContainerButtons button:active{
+  background: black;
 }
 
 /* breakpoints */

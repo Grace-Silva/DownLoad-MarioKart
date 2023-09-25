@@ -77,3 +77,21 @@ menu.onclick=()=>{
 }
 
 
+/* carrusel de personajes */
+
+// botón izquierdo:
+
+document.querySelector(".left").onclick = function(){
+  let character = document.querySelector(".character").offsetWidth;
+
+  document.querySelector(".characters").scrollLeft -= character;
+}
+
+// botón derecho:
+
+document.querySelector(".right").onclick = function(){
+  let character = document.querySelector(".character").offsetWidth;
+
+  document.querySelector(".characters").scrollLeft += character;
+}
+
