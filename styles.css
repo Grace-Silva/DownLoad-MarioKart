@@ -42,7 +42,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /*background-attachment: fixed;*/
 }
 
 .navbar {
@@ -51,6 +50,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2em 4em 2em 4em;
+  z-index: 999;
+  position: relative;
 }
 
 .navbar .logo {
@@ -104,7 +105,7 @@ body {
 }
 
 .menu {
-  z-index: 1001;
+  z-index: 10000;
   display: none;
   text-align: center;
   border: solid red;
@@ -280,6 +281,31 @@ body {
   border: 1px solid var(--white);
 }
 
+.goUp{
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  width: 3em;
+  height: 3em;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  background: var(--nintendoRed);
+  color: var(--white);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+}
+.goUp i{
+  font-size: 1.2em;
+}
+.goUp:hover{
+  background: var(--nintendoRedHover);
+}
+
+.goUpOff{}
+
 /* breakpoints */
 
 /* laptop */
@@ -300,7 +326,8 @@ body {
   }
 
   .navbar .navLinks {
-    display: none;
+    display: flex;
+    visibility: hidden;
     position: absolute;
     top: 0;
     right: -100%;
@@ -318,7 +345,7 @@ body {
   }
   .navbar .navLinks.open {
     right: 0;
-    display: flex;
+    visibility: visible;
   }
 
   .navbar .navLinks .navLink {

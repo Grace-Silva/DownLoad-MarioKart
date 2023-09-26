@@ -95,3 +95,19 @@ document.querySelector(".right").onclick = function(){
   document.querySelector(".characters").scrollLeft += character;
 }
 
+/* función ir arriba */
+let goUp = document.querySelector(".goUp");
+goUp.addEventListener("click", () =>{
+  window.scrollTo(0,0);
+});
+
+/* aparecer y desaparecer botón */
+window.onscroll = () =>{
+
+  if(window.scrollY <= 120){
+    goUp.style.visibility = "hidden";
+  }
+  else{
+    goUp.style.visibility = "visible";
+  }
+}
