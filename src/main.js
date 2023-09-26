@@ -106,8 +106,10 @@ window.onscroll = () =>{
 
   if(window.scrollY <= 120){
     goUp.style.visibility = "hidden";
+    goUp.style.opacity = "0";
   }
   else{
     goUp.style.visibility = "visible";
+    goUp.style.opacity = "1";
   }
 }
