@@ -190,24 +190,26 @@ body {
   background-size: cover;
   padding: 4em;
   text-align: center;
+  width: 100%;
+  max-width: max-content;
+  border: green solid;
 }
 
 .characters {
-  margin: 1em 0;
+  margin: 1em auto;
   display: flex;
-  padding: 1em;
-  width: max-content;
-  gap: 1.5em;
-  max-width: 100%;
   overflow: hidden;
+  border: solid white;
+  gap: 2em;
+  width: 1200px;
+  max-width: min-content;
 }
 .charactersContainer .charactersTitle{
   font-weight: 700;
   color: var(--white);
   font-size: 2em;
 }
-.characters .character {
-  width: fit-content;
+.character {
   border: 1px solid transparent;
   display: flex;
   flex-direction: column;
@@ -311,6 +313,10 @@ body {
 @media (max-width: 998px) {
   .navbar {
     padding: 2em;
+  }
+
+  .character{
+    width: calc(33vw- 20px);
   }
 }
 
