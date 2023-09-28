@@ -197,10 +197,10 @@ body {
 }
 
 .characters {
-  margin: 1em auto;
+  margin: 2em auto;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
+  grid-auto-columns: calc((100% / 4) - 15px);
   gap: 1em;
   overflow: hidden;
   scroll-snap-type: x mandatory;
@@ -214,7 +214,7 @@ body {
   border: 1px solid transparent;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 2em;
   justify-content: center;
   align-items: center;
   border-radius: 16px;
@@ -317,8 +317,8 @@ body {
     padding: 2em;
   }
 
-  .character{
-    width: calc(33vw- 20px);
+  .characters{
+    grid-auto-columns: calc(100% / 3 - 12px);
   }
 }
 
@@ -390,6 +390,11 @@ body {
   .manualDownloadLink {
     font-size: 1.1em;
   }
+
+  .characters{
+    grid-auto-columns: calc(100% / 2 - 9px);
+  }
+
 }
 
 /* móviles */
@@ -400,6 +405,10 @@ body {
 
   .manualDownloadLink {
     font-size: 1em;
+  }
+
+  .characters{
+    grid-auto-columns: 100%;
   }
 }
 
