@@ -80,7 +80,24 @@ menu.onclick=()=>{
 /* carrusel de personajes */
 
 // botón izquierdo:
+/* contenedor de elementos */
+const carrousel = document.getElementById("carrousel");
+/* botones izquierdo y derecho */
+const left = document.getElementById("left");
+const right = document.getElementById("right");
 
+
+left.onclick = function(){
+  let card = document.getElementById("carrousel").offsetWidth;
+  carrousel.scrollLeft -= card;
+}
+
+right.onclick = function(){
+  let card = document.getElementById("carrousel").offsetWidth;
+  carrousel.scrollLeft += card;
+}
+
+/*
 document.querySelector(".left").onclick = function(){
   let character = document.querySelector(".character").offsetWidth;
 
@@ -93,7 +110,7 @@ document.querySelector(".right").onclick = function(){
   let character = document.querySelector(".character").offsetWidth;
 
   document.querySelector(".characters").scrollLeft += character;
-}
+}*/
 
 /* función ir arriba */
 let goUp = document.querySelector(".goUp");
