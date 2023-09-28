@@ -188,7 +188,7 @@ body {
   background: radial-gradient(circle, rgba(191,0,16,1) 0%, rgba(48,12,155,1) 100%), url(./img/rainbow.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 4em;
+  padding: 4em 6em;
   text-align: center;
   border: green solid;
   width: 100%;
@@ -201,7 +201,7 @@ body {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 4) - 15px);
-  gap: 1em;
+  gap: 1.3em;
   overflow: hidden;
   scroll-snap-type: x mandatory;
 }
