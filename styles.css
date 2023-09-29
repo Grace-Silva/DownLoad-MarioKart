@@ -483,6 +483,7 @@ body {
     font-size: 1.1em;
   }
 
+
   .characters{
     grid-auto-columns: calc(100% / 2 - 9px);
   }
@@ -523,6 +524,32 @@ body {
   .characters{
     grid-auto-columns: 100%;
   }
+
+  #circuitsSection{
+    padding: 4em;
+  }
+
+  .circuitsContainer .listCategory{
+    flex-wrap: wrap;
+    gap: 24px 16px;
+    justify-content: center;
+  }
+
+  .circuitsContainer .listCategory * img{
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+  }
+
+  .circuitsContainer .circuitsImages{
+    display: grid;
+    grid-template-columns: repeat(2, calc((100% /2) - 9px));
+    align-content: center;
+  } 
+
+  .circuitsContainer .circuitsImages img{
+    width: 160px;
+  }
+
 }
 
 /* móviles pequeños */
@@ -541,4 +568,17 @@ body {
   .downloadButton {
     font-size: 1em;
   }
+
+  .characters{
+    grid-auto-columns: 100%;
+  }
+
+  .circuitsContainer .circuitsImages{
+    grid-template-columns: repeat(1, calc(100% - 9px));
+  }
+
+  .circuitsContainer .circuitsImages img{
+    width: 100%;
+  }
+
 }
