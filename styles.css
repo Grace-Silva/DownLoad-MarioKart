@@ -309,6 +309,31 @@ body {
   background: var(--nintendoRedHover);
 }
 
+/* filtro de imagenes */
+
+/* copa champiñón */
+#mushroom:checked ~ .circuitsImages .flowerCup, #mushroom:checked ~ .circuitsImages .starCup, #mushroom:checked ~ .circuitsImages .specialCup{
+  transition: all ease .8s;
+  opacity: .2;
+}
+
+/* copa flor */
+#flower:checked ~ .circuitsImages .mushroomCup, #flower:checked ~ .circuitsImages .starCup, #flower:checked ~ .circuitsImages .specialCup{
+  transition: all ease .8s;
+  opacity: .2;
+}
+
+/* copa estrella */
+#star:checked ~ .circuitsImages .mushroomCup, #star:checked ~ .circuitsImages .flowerCup, #star:checked ~ .circuitsImages .specialCup{
+  transition: all ease .8s;
+  opacity: .2;
+}
+
+/* copa especial */
+#special:checked ~ .circuitsImages .mushroomCup, #special:checked ~ .circuitsImages .flowerCup, #special:checked ~ .circuitsImages .starCup{
+  transition: all ease .8s;
+  opacity: .2;
+}
 
 /* breakpoints */
 
