@@ -487,6 +487,27 @@ body {
     grid-auto-columns: calc(100% / 2 - 9px);
   }
 
+  .circuitsContainer .listCategory{
+    flex-wrap: wrap;
+    gap: 24px 16px;
+    justify-content: center;
+  }
+
+  .circuitsContainer .listCategory * img{
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+  }
+
+  .circuitsContainer .circuitsImages{
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% /3) - 12px));
+    align-content: center;
+  } 
+
+  .circuitsContainer .circuitsImages img{
+    width: 180px;
+  }
+
 }
 
 /* móviles */
