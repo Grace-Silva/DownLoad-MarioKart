@@ -569,6 +569,10 @@ body {
     font-size: 1em;
   }
 
+  .charactersContainer, #circuitsSection{
+    padding: 4em 2em;
+  }
+
   .characters{
     grid-auto-columns: 100%;
   }
