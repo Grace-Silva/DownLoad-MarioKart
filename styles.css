@@ -284,6 +284,57 @@ body {
   border: 1px solid var(--white);
 }
 
+/* contenedor de circuitos */
+.circuitsContainer input[type="radio"]{
+  display: none;
+}
+
+.circuitsContainer .listCategory{
+  display: flex;
+  margin: 4em 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.listCategory label{
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.circuitsContainer .listCategory * img{
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+  width: 80px;
+}
+
+.circuitsContainer .listCategory li label span{
+  padding: 8px 12px;
+  background: var(--nintendoRed);
+  border-radius: 4px;
+}
+
+.circuitsContainer .listCategory .allImg{
+  width: 200px;
+}
+
+.circuitsContainer .circuitsImages{
+  display: grid;
+  grid-template-columns: repeat(4, calc((100% /4) - 15px));
+  gap: 1.5em;
+} 
+
+.circuitsContainer .circuitsImages img{
+  border-radius: 8px;
+}
+
 .goUp{
   position: fixed;
   right: 2em;
@@ -331,6 +382,12 @@ body {
 #special:checked ~ .circuitsImages .mushroomCup, #special:checked ~ .circuitsImages .flowerCup, #special:checked ~ .circuitsImages .starCup{
   transition: all ease .8s;
   opacity: .2;
+}
+
+/* todas */
+#all:checked ~ .circuitsImages .mushroomCup,#all:checked ~ .circuitsImages .flowerCup, #all:checked ~ .circuitsImages .starCup, #all:checked ~ .circuitsImages .specialCup{
+  transition: all ease .8s;
+  opacity: 1;
 }
 
 /* breakpoints */
