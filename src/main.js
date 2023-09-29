@@ -1,3 +1,5 @@
+/** sección de descarga **/
+
 /* selección de elementos: */
 let downloadButton = document.querySelector(".downloadButton");
 
@@ -18,6 +20,7 @@ let rewardAudio = document.getElementById("rewardAudio");
 // al clickear sobre nuestro botón este desaparece y las demás funciones se ejecutarán:
 
 downloadButton.addEventListener("click", () => {
+  /* se reproduce el sonido de recompensa */
   rewardAudio.volume = 0.5;
   rewardAudio.play();
 
@@ -26,7 +29,7 @@ downloadButton.addEventListener("click", () => {
 
     /* aqui el fondo se opacará y cambiará su imagen */
     mainContainer.style.background =
-      "radial-gradient(circle, rgba(4,4,4,0.3) 20%, rgba(4,4,4,0.6) 80%), url('./img/background2.jpg')";
+      "radial-gradient(circle, rgba(4,4,4,0.6) 20%, rgba(4,4,4,0.9) 80%), url('./img/background2.jpg')";
     mainContainer.style.backgroundSize = "cover";
 
     downloadButton.style.display = "none";
@@ -67,52 +70,35 @@ downloadButton.addEventListener("click", () => {
   }, 1000); // la funcion se actualizará cada 1 segundo
 });
 
-// menu lateral
+/** menu lateral **/
 let menu = document.querySelector(".menu");
 let navLinks = document.querySelector(".navLinks");
 
 menu.onclick=()=>{
-    menu.classList.toggle('bx-x');
     navLinks.classList.toggle('open');
 }
 
 
-/* carrusel de personajes */
+/** carrusel de personajes **/
 
-// botón izquierdo:
 /* contenedor de elementos */
 const carrousel = document.getElementById("carrousel");
 /* botones izquierdo y derecho */
 const left = document.getElementById("left");
 const right = document.getElementById("right");
 
-
+/* funcion boton izquierdo */
 left.onclick = function(){
   let card = document.getElementById("carrousel").offsetWidth;
   carrousel.scrollLeft -= card;
 }
-
+/* funcion boton derecho */
 right.onclick = function(){
   let card = document.getElementById("carrousel").offsetWidth;
   carrousel.scrollLeft += card;
 }
 
-/*
-document.querySelector(".left").onclick = function(){
-  let character = document.querySelector(".character").offsetWidth;
-
-  document.querySelector(".characters").scrollLeft -= character;
-}
-
-// botón derecho:
-
-document.querySelector(".right").onclick = function(){
-  let character = document.querySelector(".character").offsetWidth;
-
-  document.querySelector(".characters").scrollLeft += character;
-}*/
-
-/* función ir arriba */
+/** función para el botón ir arriba **/
 let goUp = document.querySelector(".goUp");
 goUp.addEventListener("click", () =>{
   window.scrollTo(0,0);

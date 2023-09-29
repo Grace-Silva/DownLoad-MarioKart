@@ -5,9 +5,7 @@
   --nintendoRedHover: #bf0010;
   --white: #fafafa;
   --yellow: #e2f20d;
-  /**--blue: #000a63;**/
   --allTransition: all ease 0.3s;
-  --shadowImage: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -29,8 +27,12 @@ html {
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background: rgb(191,0,16);
-  background: radial-gradient(circle, rgba(191,0,16,1) 0%, rgba(48,12,155,1) 100%);
+  background: rgb(191, 0, 16);
+  background: radial-gradient(
+    circle,
+    rgba(191, 0, 16, 1) 0%,
+    rgba(48, 12, 155, 1) 100%
+  );
 }
 
 /** 1. main Container: **/
@@ -85,7 +87,7 @@ body {
   background: transparent;
   border: 1px solid transparent;
   border-radius: 25px;
-  transition: var(--allTransition)
+  transition: var(--allTransition);
 }
 .navLinks .navLink:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -134,7 +136,6 @@ body {
 }
 /* here ends the top section of the site */
 
-
 /** 2. download section **/
 
 /* download button */
@@ -160,7 +161,9 @@ body {
 }
 
 /* countdown section */
-.countdownText, .pleaseWaitText, .manualDownloadText {
+.countdownText,
+.pleaseWaitText,
+.manualDownloadText {
   font-weight: 700;
   color: var(--white);
   display: none;
@@ -182,10 +185,10 @@ body {
 
 /* here ends download section*/
 
-
 /**  3. characters Section **/
 
-.charactersContainer, #circuitsSection{
+.charactersContainer,
+#circuitsSection {
   padding: 4em 6em;
   text-align: center;
   width: 100%;
@@ -204,7 +207,7 @@ body {
   scroll-snap-type: x mandatory;
 }
 
-.sectionTitle{
+.sectionTitle {
   font-weight: 700;
   color: var(--white);
   font-size: 2em;
@@ -234,7 +237,11 @@ body {
   scroll-snap-align: start;
 }
 .character:hover {
-  background: radial-gradient(circle, rgba(191,0,16,1) 0%, rgba(0,10,99,1) 100%); 
+  background: radial-gradient(
+    circle,
+    rgba(191, 0, 16, 1) 0%,
+    rgba(0, 10, 99, 1) 100%
+  );
 }
 .characters:hover > :not(:hover) {
   filter: blur(1px);
@@ -280,7 +287,7 @@ body {
   cursor: pointer;
   transition: var(--allTransition);
 }
-.charactersContainerButtons button:hover{
+.charactersContainerButtons button:hover {
   background: var(--nintendoRedHover);
 }
 .charactersContainerButtons button:active {
@@ -288,22 +295,20 @@ body {
   border: 1px solid var(--white);
 }
 
+/**  4. circuits Section **/
 
-/**  3. characters Section **/
-
-.circuitsContainer input{
+.circuitsContainer input {
   display: none;
 }
 
-.circuitsContainer .listCategory{
+.circuitsContainer .listCategory {
   display: flex;
   margin: 2em 0;
   align-items: center;
   justify-content: space-around;
 }
 
-
-.listCategory label{
+.listCategory label {
   display: inline-flex;
   flex-direction: column;
   text-align: center;
@@ -315,36 +320,79 @@ body {
   cursor: pointer;
 }
 
-.circuitsContainer .listCategory .allImg{
+.circuitsContainer .listCategory .allImg {
   width: 200px;
 }
 
-.circuitsContainer .listCategory * img{
+.circuitsContainer .listCategory * img {
   cursor: pointer;
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
   width: 80px;
 }
 
-.circuitsContainer .listCategory li label span{
+.circuitsContainer .listCategory li label span {
   padding: 8px 12px;
   background: var(--nintendoRed);
   border-radius: 4px;
 }
 
 /* cards container */
-.circuitsContainer .circuitsImages{
+.circuitsContainer .circuitsImages {
   display: grid;
-  grid-template-columns: repeat(4, calc((100% /4) - 15px));
+  grid-template-columns: repeat(4, calc((100% / 4) - 15px));
   gap: 1.5em;
-} 
+}
 
 /* card */
-.circuitsContainer .circuitsImages img{
+.circuitsContainer .circuitsImages img {
   border-radius: 8px;
 }
 
-/* goUp Button */
-.goUp{
+/* images filter */
+
+/* when mushroom Cup is selected */
+#mushroom:checked ~ .circuitsImages .flowerCup,
+#mushroom:checked ~ .circuitsImages .starCup,
+#mushroom:checked ~ .circuitsImages .specialCup {
+  transition: all ease 0.8s;
+  opacity: 0.2;
+}
+
+/* when flower Cup is selected */
+#flower:checked ~ .circuitsImages .mushroomCup,
+#flower:checked ~ .circuitsImages .starCup,
+#flower:checked ~ .circuitsImages .specialCup {
+  transition: all ease 0.8s;
+  opacity: 0.2;
+}
+
+/* when star Cup is selected */
+#star:checked ~ .circuitsImages .mushroomCup,
+#star:checked ~ .circuitsImages .flowerCup,
+#star:checked ~ .circuitsImages .specialCup {
+  transition: all ease 0.8s;
+  opacity: 0.2;
+}
+
+/* when special Cup is selected */
+#special:checked ~ .circuitsImages .mushroomCup,
+#special:checked ~ .circuitsImages .flowerCup,
+#special:checked ~ .circuitsImages .starCup {
+  transition: all ease 0.8s;
+  opacity: 0.2;
+}
+
+/* all */
+#all:checked ~ .circuitsImages .mushroomCup,
+#all:checked ~ .circuitsImages .flowerCup,
+#all:checked ~ .circuitsImages .starCup,
+#all:checked ~ .circuitsImages .specialCup {
+  transition: all ease 0.8s;
+  opacity: 1;
+}
+
+/** 5. goUp Button **/
+.goUp {
   position: fixed;
   right: 2em;
   bottom: 2em;
@@ -360,67 +408,35 @@ body {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
   visibility: hidden;
 }
-.goUp i{
+.goUp i {
   font-size: 1.2em;
 }
-.goUp:hover{
+.goUp:hover {
   background: var(--nintendoRedHover);
-}
-
-/* images fliter */
-
-/* when mushroom Cup is selected */
-#mushroom:checked ~ .circuitsImages .flowerCup, #mushroom:checked ~ .circuitsImages .starCup, #mushroom:checked ~ .circuitsImages .specialCup{
-  transition: all ease .8s;
-  opacity: .2;
-}
-
-/* when flower Cup is selected */
-#flower:checked ~ .circuitsImages .mushroomCup, #flower:checked ~ .circuitsImages .starCup, #flower:checked ~ .circuitsImages .specialCup{
-  transition: all ease .8s;
-  opacity: .2;
-}
-
-/* when star Cup is selected */
-#star:checked ~ .circuitsImages .mushroomCup, #star:checked ~ .circuitsImages .flowerCup, #star:checked ~ .circuitsImages .specialCup{
-  transition: all ease .8s;
-  opacity: .2;
-}
-
-/* when special Cup is selected */
-#special:checked ~ .circuitsImages .mushroomCup, #special:checked ~ .circuitsImages .flowerCup, #special:checked ~ .circuitsImages .starCup{
-  transition: all ease .8s;
-  opacity: .2;
-}
-
-/* all */
-#all:checked ~ .circuitsImages .mushroomCup,#all:checked ~ .circuitsImages .flowerCup, #all:checked ~ .circuitsImages .starCup, #all:checked ~ .circuitsImages .specialCup{
-  transition: all ease .8s;
-  opacity: 1;
 }
 
 /* breakpoints */
 
 /* laptop */
-@media (max-width: 998px){
-
+@media (max-width: 998px) {
   .navbar {
     padding: 2em;
   }
 
-  .characters{
+  .characters {
     grid-auto-columns: calc(100% / 3 - 12px);
   }
 
-  .charactersContainer, #circuitsSection{
+  .charactersContainer,
+  #circuitsSection {
     padding: 4em;
   }
 
-  .circuitsContainer .circuitsImages{
-    grid-template-columns: repeat(3, calc((100% /3) - 12px));
-  } 
+  .circuitsContainer .circuitsImages {
+    grid-template-columns: repeat(3, calc((100% / 3) - 12px));
+  }
 
-  .circuitsContainer .circuitsImages img{
+  .circuitsContainer .circuitsImages img {
     width: 240px;
   }
 }
@@ -494,24 +510,23 @@ body {
     font-size: 1.1em;
   }
 
-  .characters{
+  .characters {
     grid-auto-columns: calc(100% / 2 - 9px);
   }
 
-  .circuitsContainer .listCategory{
+  .circuitsContainer .listCategory {
     flex-wrap: wrap;
     gap: 24px 16px;
     justify-content: center;
   }
 
-  .circuitsContainer .circuitsImages{
-    grid-template-columns: repeat(3, calc((100% /3) - 12px));
-  } 
-
-  .circuitsContainer .circuitsImages img{
-    width: 180px;
+  .circuitsContainer .circuitsImages {
+    grid-template-columns: repeat(3, calc((100% / 3) - 12px));
   }
 
+  .circuitsContainer .circuitsImages img {
+    width: 180px;
+  }
 }
 
 /* mobile */
@@ -524,30 +539,30 @@ body {
     font-size: 1em;
   }
 
-  .characters{
+  .characters {
     grid-auto-columns: 100%;
   }
 
-  #circuitsSection{
+  #circuitsSection {
     padding: 4em;
   }
 
-  .circuitsContainer .listCategory{
+  .circuitsContainer .listCategory {
     flex-wrap: wrap;
     gap: 24px 16px;
     justify-content: center;
   }
 
-  .circuitsContainer .circuitsImages{
-    grid-template-columns: repeat(2, calc((100% /2) - 9px));
-  } 
+  .circuitsContainer .circuitsImages {
+    grid-template-columns: repeat(2, calc((100% / 2) - 9px));
+  }
 
-  .circuitsContainer .circuitsImages img{
+  .circuitsContainer .circuitsImages img {
     width: 160px;
   }
 }
 
-/* móviles pequeños */
+/* small mobiles */
 @media (max-width: 320px) {
   .navbar {
     padding: 2em 1.2em;
@@ -564,19 +579,20 @@ body {
     font-size: 1em;
   }
 
-  .charactersContainer, #circuitsSection{
+  .charactersContainer,
+  #circuitsSection {
     padding: 4em 2em;
   }
 
-  .characters{
+  .characters {
     grid-auto-columns: 100%;
   }
 
-  .circuitsContainer .circuitsImages{
+  .circuitsContainer .circuitsImages {
     grid-template-columns: repeat(1, calc(100% - 9px));
   }
 
-  .circuitsContainer .circuitsImages img{
+  .circuitsContainer .circuitsImages img {
     width: 100%;
   }
 }
