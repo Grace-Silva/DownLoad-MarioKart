@@ -27,6 +27,8 @@ html {
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background: rgb(191,0,16);
+  background: radial-gradient(circle, rgba(191,0,16,1) 0%, rgba(48,12,155,1) 100%);
 }
 
 .mainContainer {
@@ -184,11 +186,7 @@ body {
 
 /* personajes */
 
-.charactersContainer {
-  background: rgb(191,0,16);
-  background: radial-gradient(circle, rgba(191,0,16,1) 0%, rgba(48,12,155,1) 100%), url(./img/rainbow.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+.charactersContainer, #circuitsSection{
   padding: 4em 6em;
   text-align: center;
   width: 100%;
@@ -205,7 +203,7 @@ body {
   overflow: hidden;
   scroll-snap-type: x mandatory;
 }
-.charactersContainer .charactersTitle{
+.charactersTitle{
   font-weight: 700;
   color: var(--white);
   font-size: 2em;
