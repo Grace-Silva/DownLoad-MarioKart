@@ -5,7 +5,9 @@
   --nintendoRedHover: #bf0010;
   --white: #fafafa;
   --yellow: #e2f20d;
-  --blue: #000a63;
+  /**--blue: #000a63;**/
+  --allTransition: all ease 0.3s;
+  --shadowImage: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -31,6 +33,8 @@ body {
   background: radial-gradient(circle, rgba(191,0,16,1) 0%, rgba(48,12,155,1) 100%);
 }
 
+/** 1. main Container: **/
+
 .mainContainer {
   height: 100vh;
   display: flex;
@@ -47,44 +51,44 @@ body {
   background-position: center;
 }
 
+/* navigation bar: */
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 4em 2em 4em;
+  padding: 2em 4em;
   z-index: 999;
   position: relative;
 }
-
+/* logo */
 .navbar .logo {
   width: 240px;
 }
 
 .navbar .logo .logoImage {
   width: 100%;
-  transition: all ease 0.3s;
+  transition: var(--allTransition);
 }
 .navbar .logo .logoImage:hover {
   filter: drop-shadow(0 0 4px #fff);
 }
-
+/* navigation links */
 .navbar .navLinks {
   display: flex;
   gap: 2.2em;
   z-index: 1000;
 }
-
+/* link */
 .navLinks .navLink {
   padding: 6px 16px;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 25px;
-  transition: all ease 0.5s;
+  transition: var(--allTransition)
 }
 .navLinks .navLink:hover {
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -99,7 +103,7 @@ body {
   font-size: 1.1em;
   font-weight: 600;
 }
-
+/* play now button */
 .navLinks .navLink:first-child {
   background: var(--nintendoRed);
 }
@@ -107,6 +111,7 @@ body {
   background: var(--nintendoRedHover);
 }
 
+/* shrink menu */
 .menu {
   z-index: 10000;
   display: none;
@@ -121,25 +126,29 @@ body {
   border-radius: 50%;
   color: white;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1em;
   cursor: pointer;
 }
 .menu:active {
   background: var(--nintendoRed);
 }
+/* here ends the top section of the site */
 
+
+/** 2. download section **/
+
+/* download button */
 .downloadButton {
-  border: solid white;
   margin-top: 30vh;
   padding: 12px 24px;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: var(--white);
   background: var(--nintendoRed);
   border-radius: 25px;
   border: none;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  transition: all ease 0.5s;
+  transition: var(--allTransition);
 }
 .downloadButton:hover {
   background: var(--nintendoRedHover);
@@ -150,8 +159,9 @@ body {
   margin-left: 8px;
 }
 
-.countdownText {
-  font-weight: 600;
+/* countdown section */
+.countdownText, .pleaseWaitText, .manualDownloadText {
+  font-weight: 700;
   color: var(--white);
   display: none;
   text-align: center;
@@ -160,23 +170,9 @@ body {
 .countdownText span,
 .manualDownloadLink {
   color: var(--yellow);
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 700;
-  transition: all ease 0.2s;
-}
-
-.pleaseWaitText {
-  font-weight: 600;
-  color: var(--white);
-  display: none;
-  text-align: center;
-}
-
-.manualDownloadText {
-  font-weight: 600;
-  color: var(--white);
-  display: none;
-  text-align: center;
+  transition: var(--allTransition);
 }
 
 .manualDownloadLink:hover {
@@ -184,7 +180,10 @@ body {
   text-shadow: 0 0 2px var(--white);
 }
 
-/* personajes */
+/* here ends download section*/
+
+
+/**  3. characters Section **/
 
 .charactersContainer, #circuitsSection{
   padding: 4em 6em;
@@ -194,6 +193,7 @@ body {
   position: relative;
 }
 
+/* characters - carrousel */
 .characters {
   margin: 2em auto;
   display: grid;
@@ -203,11 +203,14 @@ body {
   overflow: hidden;
   scroll-snap-type: x mandatory;
 }
-.charactersTitle{
+
+.sectionTitle{
   font-weight: 700;
   color: var(--white);
   font-size: 2em;
 }
+
+/* character - card */
 .character {
   border: 1px solid transparent;
   display: flex;
@@ -215,11 +218,11 @@ body {
   padding: 2em;
   justify-content: center;
   align-items: center;
-  border-radius: 16px;
+  border-radius: 8px;
   text-align: center;
   gap: 8px;
   cursor: pointer;
-  transition: all ease-in-out 1s;
+  transition: var(--allTransition);
   color: var(--white);
   background: rgb(230, 0, 18);
   background: radial-gradient(
@@ -231,7 +234,6 @@ body {
   scroll-snap-align: start;
 }
 .character:hover {
-  background: rgb(191,0,16);
   background: radial-gradient(circle, rgba(191,0,16,1) 0%, rgba(0,10,99,1) 100%); 
 }
 .characters:hover > :not(:hover) {
@@ -248,8 +250,8 @@ body {
 .character span {
   display: inline-block;
   background: var(--nintendoRed);
-  padding: 6px;
-  border-radius: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
   font-weight: 600;
   color: var(--white);
 }
@@ -259,6 +261,7 @@ body {
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
 }
 
+/* forward buttons */
 .charactersContainerButtons {
   display: flex;
   text-align: center;
@@ -275,9 +278,9 @@ body {
   border: 1px solid transparent;
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
   cursor: pointer;
-  transition: all ease 0.5s;
+  transition: var(--allTransition);
 }
-.charactersContainerButtons button:hover {
+.charactersContainerButtons button:hover{
   background: var(--nintendoRedHover);
 }
 .charactersContainerButtons button:active {
@@ -285,14 +288,16 @@ body {
   border: 1px solid var(--white);
 }
 
-/* contenedor de circuitos */
-.circuitsContainer input[type="radio"]{
+
+/**  3. characters Section **/
+
+.circuitsContainer input{
   display: none;
 }
 
 .circuitsContainer .listCategory{
   display: flex;
-  margin: 4em 0;
+  margin: 2em 0;
   align-items: center;
   justify-content: space-around;
 }
@@ -310,6 +315,10 @@ body {
   cursor: pointer;
 }
 
+.circuitsContainer .listCategory .allImg{
+  width: 200px;
+}
+
 .circuitsContainer .listCategory * img{
   cursor: pointer;
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
@@ -322,20 +331,19 @@ body {
   border-radius: 4px;
 }
 
-.circuitsContainer .listCategory .allImg{
-  width: 200px;
-}
-
+/* cards container */
 .circuitsContainer .circuitsImages{
   display: grid;
   grid-template-columns: repeat(4, calc((100% /4) - 15px));
   gap: 1.5em;
 } 
 
+/* card */
 .circuitsContainer .circuitsImages img{
   border-radius: 8px;
 }
 
+/* goUp Button */
 .goUp{
   position: fixed;
   right: 2em;
@@ -348,7 +356,7 @@ body {
   color: var(--white);
   border: 1px solid transparent;
   cursor: pointer;
-  transition: all ease-in-out 0.5s;
+  transition: var(--allTransition);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
   visibility: hidden;
 }
@@ -359,33 +367,33 @@ body {
   background: var(--nintendoRedHover);
 }
 
-/* filtro de imagenes */
+/* images fliter */
 
-/* copa champiñón */
+/* when mushroom Cup is selected */
 #mushroom:checked ~ .circuitsImages .flowerCup, #mushroom:checked ~ .circuitsImages .starCup, #mushroom:checked ~ .circuitsImages .specialCup{
   transition: all ease .8s;
   opacity: .2;
 }
 
-/* copa flor */
+/* when flower Cup is selected */
 #flower:checked ~ .circuitsImages .mushroomCup, #flower:checked ~ .circuitsImages .starCup, #flower:checked ~ .circuitsImages .specialCup{
   transition: all ease .8s;
   opacity: .2;
 }
 
-/* copa estrella */
+/* when star Cup is selected */
 #star:checked ~ .circuitsImages .mushroomCup, #star:checked ~ .circuitsImages .flowerCup, #star:checked ~ .circuitsImages .specialCup{
   transition: all ease .8s;
   opacity: .2;
 }
 
-/* copa especial */
+/* when special Cup is selected */
 #special:checked ~ .circuitsImages .mushroomCup, #special:checked ~ .circuitsImages .flowerCup, #special:checked ~ .circuitsImages .starCup{
   transition: all ease .8s;
   opacity: .2;
 }
 
-/* todas */
+/* all */
 #all:checked ~ .circuitsImages .mushroomCup,#all:checked ~ .circuitsImages .flowerCup, #all:checked ~ .circuitsImages .starCup, #all:checked ~ .circuitsImages .specialCup{
   transition: all ease .8s;
   opacity: 1;
@@ -394,7 +402,8 @@ body {
 /* breakpoints */
 
 /* laptop */
-@media (max-width: 998px) {
+@media (max-width: 998px){
+
   .navbar {
     padding: 2em;
   }
@@ -403,10 +412,12 @@ body {
     grid-auto-columns: calc(100% / 3 - 12px);
   }
 
+  .charactersContainer, #circuitsSection{
+    padding: 4em;
+  }
+
   .circuitsContainer .circuitsImages{
-    display: grid;
     grid-template-columns: repeat(3, calc((100% /3) - 12px));
-    align-content: center;
   } 
 
   .circuitsContainer .circuitsImages img{
@@ -414,10 +425,10 @@ body {
   }
 }
 
-/* tablets y ipads */
+/* tablets & ipads */
 @media (max-width: 768px) {
   .navbar {
-    padding: 1.6em;
+    padding: 1.8em;
   }
 
   .navbar .logo {
@@ -440,7 +451,7 @@ body {
     background: var(--nintendoRedHover);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all ease 0.3s;
+    transition: var(--allTransition);
   }
   .navbar .navLinks.open {
     right: 0;
@@ -483,7 +494,6 @@ body {
     font-size: 1.1em;
   }
 
-
   .characters{
     grid-auto-columns: calc(100% / 2 - 9px);
   }
@@ -494,15 +504,8 @@ body {
     justify-content: center;
   }
 
-  .circuitsContainer .listCategory * img{
-    cursor: pointer;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
-  }
-
   .circuitsContainer .circuitsImages{
-    display: grid;
     grid-template-columns: repeat(3, calc((100% /3) - 12px));
-    align-content: center;
   } 
 
   .circuitsContainer .circuitsImages img{
@@ -511,7 +514,7 @@ body {
 
 }
 
-/* móviles */
+/* mobile */
 @media (max-width: 480px) {
   .navbar .logo {
     width: 200px;
@@ -535,21 +538,13 @@ body {
     justify-content: center;
   }
 
-  .circuitsContainer .listCategory * img{
-    cursor: pointer;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
-  }
-
   .circuitsContainer .circuitsImages{
-    display: grid;
     grid-template-columns: repeat(2, calc((100% /2) - 9px));
-    align-content: center;
   } 
 
   .circuitsContainer .circuitsImages img{
     width: 160px;
   }
-
 }
 
 /* móviles pequeños */
@@ -584,5 +579,4 @@ body {
   .circuitsContainer .circuitsImages img{
     width: 100%;
   }
-
 }
